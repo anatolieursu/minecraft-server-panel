@@ -1,0 +1,71 @@
+body {
+    background-color: #363946;
+}
+.wiki_page{
+    width: 100%;
+    position: relative;
+    padding: 10px 30px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section_categ{
+    color: white;
+}
+.section_categ p {
+    font-size: 35px;
+    margin: 0; 
+    color: white;
+    margin-top: 10px;
+}
+.section_categ a {
+    transition: 0.5s all ease;
+}
+.section_categ a:hover{
+    opacity: 0.4;
+}
+.content-wiki{
+    color: white;
+    font-family: Arial;
+    padding: 10px 50px;
+    height: 100%;
+}
+.content-wiki img {
+    width: 100%;
+}
+.menu_img{
+    display: none;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.menu_img:hover{
+    opacity: 0.7;
+}
+.menu_img:active {
+    opacity: 0.3;
+}
+.menu_img img {
+    width: 50px;
+}
+@media only screen and (max-width: 990px) {
+    .menu_img {
+        display: flex;
+    }
+}
+
+.newNavBar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: -100px;
+}
+.newContentWiki{
+    display: none;
+}
