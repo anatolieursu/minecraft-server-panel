@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApplyController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ForumController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\WikiController;
+use App\Models\Chat;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,3 +70,9 @@ Route::get("/admin", [RedirectController::class, "redirectToAdmin"])->middleware
 Route::get("/set-status/{id}", [ApplyController::class, "upgradeStatus"])->middleware(["auth"]);
 
 Route::get("/search", [Controller::class, "search"]);
+
+Route::prefix("chat")->group(function() {
+    Route::get("/live", [ChatController::class, "index"])->name("chat.view");
+    Route::post("/store", [ChatController::class, "store"])->name("chat.store");
+    Route::get("/load", [ChatController::class, "load"])->name("chat.load");
+});

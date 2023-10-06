@@ -53,6 +53,11 @@ class ForumController extends Controller
 
         return redirect()->back();
     }
+    public function load(Request $request) {
+        $start = $request->get('start');
+        $forumId = $request->get('forum');
+        return response()->json(Message::where("id", '>', $start)->where("forum_id", $forumId)->get());
+    }
 
     /**
      * Display the specified resource.

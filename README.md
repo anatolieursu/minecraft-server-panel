@@ -1,6 +1,6 @@
 <p align=center><a href="https://discord.gg/devroom"><img src="https://github.com/anatolieursu/teste/assets/104382017/5d94febd-d084-4271-b967-e99c79ef742f"></a>
 </p>
-<p align=center>Version: 1.00<br>All rights reserved - Ursu Anatolie 2023 | Devroom Resource</p>
+<p align=center>Version: 1.01<br>All rights reserved - Ursu Anatolie 2023 | Devroom Resource</p>
 <p></p>
 
 ## Set it for your Server

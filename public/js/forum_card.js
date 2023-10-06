@@ -5,7 +5,3 @@ function setReply(value, messageContent, author) {
     console.log("Setat pentru " + value)
     labelTextForReply.innerHTML = "Reply For '" + messageContent + "' | from "+ author +"...";
 }
-
-function addMesssage() {
-    
-}

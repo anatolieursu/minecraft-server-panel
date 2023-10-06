@@ -24,6 +24,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route("dashboard") }}">Profile</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route("chat.view") }}">Live chat</a>
+          </li>
           @if(Auth::user())
             @if(Auth::user()->admin)
               <li class="nav-item">
