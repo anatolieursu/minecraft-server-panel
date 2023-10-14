@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiscordBotController;
 use App\Http\Controllers\StaffController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix("/staff")->group(function() {
     Route::post("/add", [StaffController::class, "create"]);
 });
+
+Route::post("/connect", [DiscordBotController::class, "connect"]);
