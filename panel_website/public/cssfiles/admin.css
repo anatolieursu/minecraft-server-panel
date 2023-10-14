@@ -1,0 +1,42 @@
+body {
+    background-color: #363946;
+}
+.admin_panel{
+    padding: 20px 50px;
+}
+.card_info {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    margin-top: 10px;
+}
+.image_minecraft{
+    width: 100%;
+    margin-top: 20px;
+    filter: blur(8px);
+    border-radius: 20px;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+.title {
+    font-family: "Arial";
+    font-size: 25px;
+    color: white;
+    margin-top: 50px;
+}
+.delete_btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background-color: rgb(193, 63, 63);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.5s all ease;
+}
+.delete_btn:hover {
+    opacity: 0.8;
+}
