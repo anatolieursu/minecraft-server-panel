@@ -1,38 +1,33 @@
 const GetEvents = require("./resources/GetEvents");
+const FetchAPI = require("./utilities/fetch_api");
 
 class Connect {
-    connect_to_panel(bot_token, panel_url) {
+    connected = false;
+    events;
+    async connect_to_panel(bot_token, panel_url) {
         const connect_url = panel_url + "/api/connect"
-        const data = {
-            bot_token: bot_token
-        };
-
-        const requestOptions = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        };
-
-        fetch(connect_url, requestOptions)
-            .then(response => {
-                if (!response.ok) {
-                    console.log(response)
-                    throw new Error('Cererea a eșuat');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Eroare:', error);
-            });
+        const fetch_post = new FetchAPI();
+        const data = await fetch_post.post(connect_url, {"bot_token": bot_token})
+        if(data.error_response) {
+            console.log("Found an error: " + data.error_response.toString);
+        }
+        if(data.status_code) {
+            if(data.status_code === 200) {
+                this.connected = true;
+            }
+        } else {
+            console.log("No status code found");
+        }
     }
-    on_events(panel_url) {
-        const on_events_url = panel_url + "/api/on/events"
-        GetEvents(on_evens_url)
+    async on_events(panel_url) {
+        if(!this.connected) {
+            console.log("Connect first!");
+        } else {
+            const on_events_url = panel_url + "/api/on/events"
+            const result_events = await GetEvents(on_events_url)
+            this.events = await result_events.response
+            return this.events
+        }
     }
 }
 

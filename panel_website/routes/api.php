@@ -25,3 +25,6 @@ Route::prefix("/staff")->group(function() {
 });
 
 Route::post("/connect", [DiscordBotController::class, "connect"]);
+Route::prefix("/on")->group(function() {
+    Route::get("/events", [DiscordBotController::class, "on_events"])->name("api.on.events");
+});

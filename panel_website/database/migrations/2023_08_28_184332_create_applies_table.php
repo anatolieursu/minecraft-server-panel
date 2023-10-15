@@ -23,6 +23,7 @@ return new class extends Migration
             $table->longText("reason");
             $table->integer("age");
             $table->string("status")->default("checking");
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }

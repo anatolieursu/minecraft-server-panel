@@ -22,6 +22,7 @@ return new class extends Migration
             $table->longText("content");
             $table->string("image_path");
             $table->double("version")->default(0);
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }

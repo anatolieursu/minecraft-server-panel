@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("message");
             $table->string("author");
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }

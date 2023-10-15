@@ -23,6 +23,8 @@ return new class extends Migration
             $table->foreign("user_id")->references("id")->on("users");    
             $table->string("username");
             $table->string("avatar");
+
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }

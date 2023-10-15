@@ -24,6 +24,7 @@ return new class extends Migration
 
             $table->integer("forum_id");
             $table->string("reply_from_msg_id")->nullable();
+            $table->boolean("seen")->default(false);
             $table->timestamps();
         });
     }
