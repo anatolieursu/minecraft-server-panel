@@ -32,7 +32,7 @@ class FetchAPI {
             }
         } else {
             return {
-                "error_response": await response.text
+                "error_response": await response
             }
         }
     }
