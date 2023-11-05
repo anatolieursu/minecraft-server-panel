@@ -33,6 +33,7 @@ Set them with the necessary information from the discord developer portal. Use a
   <li>Wiki</li>
   <li>Staff Applications</li>
   <li>Profile</li>
+    <li>Chat Real Time</li>
   <li>Admin ( for admins )</li>
 </ul>
 
