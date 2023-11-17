@@ -11,7 +11,9 @@
 
     <link rel="icon" type="image/x-icon" href="{{ env("SERVER_IMAGE") }}">
 </head>
-<body>
+<body  @if(!empty(env("BACKGROUND_COLOR")))
+style="background-color: {{ env("BACKGROUND_COLOR") }} !important;"
+@endif>
     @include("comps.header")
     <div class="forum_page">
         <div class="card" style="width: 95%; background-color: transparent; border: 1px solid white; color: white; margin: 0 auto; border-radius: 5px; margin-top: 10px; position: relative;">

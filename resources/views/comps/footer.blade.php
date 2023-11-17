@@ -1,4 +1,4 @@
-<footer class="bg-dark text-center text-white" >
+<footer class="bg-dark text-center text-white" @if(!empty(env("HEADER_COLOR"))) style="background-color: {{ env("FOOTER_COLOR") }} !important;" @endif>
     <div class="container p-4 pb-0">
         <section class="mb-4">
             <a class="btn btn-outline-light btn-floating m-1" href="{{ env("FACEBOOK_LINK") }}" role="button">

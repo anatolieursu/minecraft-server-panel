@@ -1,6 +1,6 @@
 <p align=center><a href="https://discord.gg/devroom"><img src="https://github.com/anatolieursu/teste/assets/104382017/5d94febd-d084-4271-b967-e99c79ef742f"></a>
 </p>
-<p align=center>Version: 1.0.5<br>All rights reserved - Ursu Anatolie 2023 | Devroom Resource</p>
+<p align=center>Version: 1.0.6<br>All rights reserved - Ursu Anatolie 2023 | Devroom Resource</p>
 <p></p>
 
 ## Set it for your Server
@@ -61,6 +61,8 @@ Only staff/admin users and those who created the forum can add messages.<br>
 - Personal staff
 The system will retain all rows from the 'staff' database and group them all<br>
 It is an api that gives you the possibility to include the staff from java (to redirect all players with staff)<br>
+- Live chat
+Users will be able to chat anonymously live. <br>
 - Wiki
 The wiki will be set from the database<br>
 - Staff Applications
@@ -81,6 +83,22 @@ How to use the api to enter the staff in the database?
 - api type: post
 - requests: name, rank, password
 - you can change the password from the .env file
+
+## Why don't the images work?
+
+1. Probably the host path is not the same as the default path. Consequently, I have to update it myself.
+Open the /config/app.php file
+
+At the end of the code you will see a 'path' attribute with the default set to 'public_path()'
+Change that feature to the path of the host.
+
+## How do I set the main colors? Background/Header and Footer
+In the .env file at the end you will find the characteristics BACKGROUND_COLOR etc.
+
+By default they will be set empty. To determine a color, edit the color value from the "" needles. Example: BACKGROUND_COLOR="#fff700"
+
+## Do you need help with hosting or have you found a bug?
+Contact me and I will allocate my free time to help you host the project properly. At the same time, if you need more features, create a commission and we will set a price.
 
 ## Integrations
 - MySql Integration

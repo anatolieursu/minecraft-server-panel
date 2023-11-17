@@ -1,4 +1,4 @@
-<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="padding: 20px 0;" id="the_navbar">
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="padding: 20px 0; @if(!empty(env("HEADER_COLOR"))) background-color: {{ env("HEADER_COLOR") }} !important; @endif" id="the_navbar">
     <div class="container-fluid">
       <a style="margin-left: 20px;" class="navbar-brand" href="{{ route("welcome") }}">{{ env("MINECRAFT_SERVER_NAME") }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleNavbar">

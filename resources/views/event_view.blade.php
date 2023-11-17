@@ -11,7 +11,9 @@
 
     <link rel="icon" type="image/x-icon" href="{{ env("SERVER_IMAGE") }}">
 </head>
-<body>
+<body  @if(!empty(env("BACKGROUND_COLOR")))
+style="background-color: {{ env("BACKGROUND_COLOR") }} !important;"
+@endif>
     @include("comps.header")
     <div class="event_view_page">
         <div class="card" style="width: 95%; background-color: transparent; border: 1px solid white; color: white; margin: 0 auto; border-radius: 5px; margin-top: 10px; position: relative;">
@@ -28,7 +30,7 @@
             <p class="card-text" style="margin-top: 20px">{{ $data->content }}</p>
             <h6 style="color: rgb(166, 166, 166); position: absolute; right: 5px; bottom: 5px;" class="card-subtitle mb-2">{{ $data ->created_at }}</h6>
             </div>
-            <img src="{{ str_replace(public_path(), '', $data->image_path) }}" alt="{{ $data->title }}">
+            <img src="{{ str_replace(config("app.path"), '', $data->image_path) }}" alt="{{ $data->title }}">
         </div>
     </div>
 </body>

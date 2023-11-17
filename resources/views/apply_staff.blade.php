@@ -11,7 +11,9 @@
 
     <link rel="icon" type="image/x-icon" href="{{ env("SERVER_IMAGE") }}">
 </head>
-<body>
+<body  @if(!empty(env("BACKGROUND_COLOR")))
+style="background-color: {{ env("BACKGROUND_COLOR") }} !important;"
+@endif>
     @include("comps.header")
     
     <div class="apply_staff">

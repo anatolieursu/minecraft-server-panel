@@ -212,4 +212,6 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    // HERE SET THE PATH FOR IMAGES, PUBLIC ROUTES
+    'path' => public_path()
 ];

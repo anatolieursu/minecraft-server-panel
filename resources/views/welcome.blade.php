@@ -11,7 +11,9 @@
 
     <link rel="icon" type="image/x-icon" href="{{ env("SERVER_IMAGE") }}">
 </head>
-<body>
+<body @if(!empty(env("BACKGROUND_COLOR")))
+  style="background-color: {{ env("BACKGROUND_COLOR") }} !important;"
+@endif>
     @include("comps.header")
 
     {{-- Hero PAGE: All rights reserved - Ursu Anatolie --}}
@@ -22,6 +24,7 @@
               <p class="card-text">It's time to test your skill in our next Hypixel Tournament, Wool Wars 4v4!
                 If you don't know about tournaments or the Tournament Hall, or if you'd like to know more about some of the terms in this post, make sure to take a look at the first tournament post.</p>
               <a href="#" class="btn btn-primary">{{ $players }} Members Online</a>
+              <a href="{{ env("DONATE_LINK") }}" class="btn btn-success">Donate</a>
               <img src="https://wallpapers.com/images/featured/minecraft-s2kxfahyg30sob8q.jpg" alt="{{ env("MINECRAFT_SERVER_NAME") }}" class="image_minecraft" draggable="false">
             </div>
         </div>

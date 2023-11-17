@@ -63,7 +63,9 @@
         }
     </script>
 </head>
-<body>
+<body  @if(!empty(env("BACKGROUND_COLOR")))
+style="background-color: {{ env("BACKGROUND_COLOR") }} !important;"
+@endif>
     @include("comps.header")
     <div class="container_username">
         <p id="app_url" style="display: none">{{ env("APP_URL") }}</p>
